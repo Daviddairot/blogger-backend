@@ -4,6 +4,7 @@ import { UserRequestBody } from "../types/user";
 import { confEmail } from "../services/echeck";
 import User from "../models/Register";
 
+
 export const createUser = asyncTryCatch(
     async (req: Request, res: Response) => {
         const { username, password, email }: UserRequestBody = req.body;
