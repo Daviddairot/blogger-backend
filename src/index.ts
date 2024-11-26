@@ -1,6 +1,10 @@
 // src/index.ts
 import express, { Request, Response } from 'express';
 import mainRoute from './routes/allRoutes';
+import mongoose from "mongoose";
+
+import dotenv from "dotenv";
+dotenv.config();
 
 const app = express();
 const port = 3000;
@@ -14,6 +18,18 @@ app.get('/', (req: Request, res: Response) => {
 app.use("/api/v1/", mainRoute);
 
 
-app.listen(port, () => {
-  console.log(`Server started on port ${port}`);
-});
+const PORT = process.env.PORT || 3000;
+const MONGO_URI = process.env.MONGO_URI || "mongodb://localhost:27017/iwash";
+
+mongoose
+  .connect(MONGO_URI)
+  .then(() => {
+    app.listen(PORT, () => {
+      console.log(
+        `connected to db & Server is running on http://localhost:${PORT}`
+      );
+    });
+  })
+  .catch((error: Error) => {
+    console.log(error);
+  });
