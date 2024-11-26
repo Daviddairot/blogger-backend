@@ -1,12 +1,12 @@
 import express from "express";
 
-// import {  } from "../controller/authadmin.js";
+import { createUser } from "../controller/authadmin";
 
 const router = express.Router();
-router.post("/signup", (req, res) => {
-    res.send("User signup route");
-})
-
+router.post(
+    "/signup", 
+    createUser
+)
 
 
 export default router;
