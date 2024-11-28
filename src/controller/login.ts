@@ -6,6 +6,8 @@ import User from "../models/Register";
 import bcrypt from "bcrypt"; // Ensure bcrypt is installed
 import jwt from "jsonwebtoken"; // Ensure jsonwebtoken is installed
 import dotenv from "dotenv";
+// import { checkPassword } from "../services/cpassword";
+
 dotenv.config();
 
 
