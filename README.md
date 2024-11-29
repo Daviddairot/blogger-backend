@@ -1,5 +1,5 @@
 Blogger Project Overview
-The Blogger project implements essential CRUD (Create, Read, Update, and Delete) operations, providing functionalities such as creating posts, retrieving all posts, deleting posts, and updating posts. This implementation is both simple and highly functional, making it a great foundation for understanding or extending CRUD operations in a Node.js environment.
+The Blogger project implements essential CRUD (Create, Read, Update, and Delete) operations with Mongodb, providing functionalities such as creating posts, retrieving all posts, deleting posts, and updating posts. This implementation is both simple and highly functional, making it a great foundation for understanding or extending CRUD operations in a Node.js environment.
 
 This README will guide you through downloading, setting up, and integrating the code into your own project.
 
